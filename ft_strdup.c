@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 12:20:48 by hacharka          #+#    #+#             */
-/*   Updated: 2024/10/31 12:44:08 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/10/31 15:42:21 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ char *ft_strdup(const char *s1)
     }
     copy[i] = '\0';
     return (copy);
-    
+    // hello World
     
 }
