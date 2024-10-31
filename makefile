@@ -31,6 +31,7 @@ SRC = ft_isalpha.c \
 		ft_calloc.c \
 		ft_strdup.c \
 		ft_strjoin.c \
+		ft_strtrim.c \
 		main.c
 
 OBJ = $(SRC:.c=.o)
