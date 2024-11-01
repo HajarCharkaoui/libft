@@ -6,19 +6,54 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:13:20 by hacharka          #+#    #+#             */
-/*   Updated: 2024/10/31 16:47:50 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/01 16:12:20 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ife
-char *ft_strtrim(char const *s1, char const *set)
+int isexiste(const char *str, char c)
 {
     size_t i;
-    size_t j;
-    char *trim;
 
-    trim = malloc(ft_strlen(s))
-    
+    i = 0;
+    while(str[i] != '\0')
+    {
+        if (str[i] == c)
+            return 1;
+        i++;
+    }
+    return 0;
+}
+
+char *ft_strtrim(char const *s1, char const *set)
+{
+    size_t start;
+    size_t end;
+    char *trim;
+    size_t i;
+
+    start = 0;
+    while (s1[start] != '\0' && isexiste(set, s1[start]) == 1)
+    {
+        start++;
+    } 
+    end = ft_strlen(s1);
+    end--;
+    while (end > 0 && isexiste(set, s1[end]) == 1)
+    {
+       end--;
+    }  
+    trim = malloc(end - start + 1);
+    if(trim != NULL)
+    {
+        i = 0;
+        while(start < end)
+        {
+            trim[i++] = s1[start++];
+        }
+        trim[i] = '\0';
+        return trim;
+    }    
+    return NULL;
 }
