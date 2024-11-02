@@ -6,11 +6,12 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 16:15:28 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/01 20:08:26 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/02 16:39:43 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int count_del(const char *split, char c)
 {
@@ -21,11 +22,11 @@ int count_del(const char *split, char c)
     i = 0;
     while (split[i] != '\0')
     {
-        if (split[i] == c)
+        if (split[i] != c && (split[i - 1] == c || i == 0))
             count++;
         i++;
     }
-    return count + 1;
+    return count;
 }
 
 size_t count_len(const char *str, char c)
@@ -36,7 +37,7 @@ size_t count_len(const char *str, char c)
     while (str[len] != c && str[len] != '\0') len++;
     return len;
 }
-void print_string(char *strs, const char *s1, char c)
+/*void print_string(char *strs, const char *s1, char c)
 {
     int i;
     int j;
@@ -50,32 +51,32 @@ void print_string(char *strs, const char *s1, char c)
         j++;
     }
     strs[i] = '\0';
-}
+}*/
 
 char **ft_split(char const *s, char c)
 {
     char **arr;
-    int i;
-    size_t m;
+    int j;
+    int start;
     
-    
-    arr = (char **)malloc (count_del(s, c) * sizeof(char *));
+    arr = (char **)malloc ((count_del(s, c) + 1) * sizeof(char *));
     if (!arr) return NULL;
-    i = 0;
-    while (i++ < count_del(s, c) && *s != '\0')
+    j  = 0;
+    start = 0;
+    while (j < count_del(s, c) && *s != '\0')
     {
-        while (*s == c) s++;
-        m = count_len(s, c);
-        arr[i] = malloc (m + 1);
-        if(!arr[i])
+        while (s[start] == c) 
+        start++;
+        arr[j] = ft_substr(s, start, count_len(s, c));
+        if(!arr[j])
         {
-            while (i > 0) free(arr[--i]);
+            while (j > 0) free(arr[--j]);
             free(arr);
             return NULL;
         }
-        print_string(arr[i], s, c);
-        s += m;
+        start += count_len(s, c);
+        j++;
     }
-    arr[i] = NULL;
+    arr[j] = NULL;
     return arr;
 }

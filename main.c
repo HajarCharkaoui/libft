@@ -4,7 +4,7 @@
 
 int main()
 {
-     char const *s = "hello,world";
+     char const *s = "hello,,,,,world,,";
     char delimiter = ',';
 
     // Call ft_split
