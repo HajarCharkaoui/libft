@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 15:44:13 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/03 20:02:47 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/03 21:40:04 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int lenofstring(int n)
 {
-    int count;
-
+    int     count;
+    
     count = 0;
     while (n / 10 != 0)
     {
@@ -23,12 +23,12 @@ int lenofstring(int n)
         count++;
     }
     if (n < 0)
-        return count + 2;
+        return (count + 2);
     else
-        return count + 1;
+        return (count + 1);
 }
 
-void fill_the_string(char *str, int n, int lenght)
+void    fill_the_string(char *str, int n, int lenght)
 {
     int s;
     int e;
@@ -58,16 +58,22 @@ void fill_the_string(char *str, int n, int lenght)
         }
     }
 }
-char *ft_itoa(int n)
+
+char    *ft_itoa(int n)
 {
-    char *itoa;
-    int len;
-    
+    char    *itoa;
+    int     len;
+     
     len = lenofstring(n);
     itoa = malloc ((len + 1) * sizeof(char));
     if (itoa == NULL)
-        return NULL;
+        return (NULL);
+    else if (n == -2147483648)
+            return (ft_strdup("-2147483648"));
     else
-        fill_the_string(itoa, n, len); 
-    return itoa; 
+    {
+        fill_the_string(itoa, n, len);
+    }
+    
+    return (itoa); 
 }
