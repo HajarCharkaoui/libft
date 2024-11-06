@@ -26,13 +26,27 @@
 
 //     return 0;
 // }
+// int main()
+// {
+// 	int fd = open("output.txt", O_WRONLY | O_CREAT | O_TRUNC , 0644);
+	
+// 	ft_putnbr_fd(-224, fd);
+// 	//ft_putchar_fd('\n', fd);
+
+// 	close(fd);
+// 	return 0;
+// }
+
 int main()
 {
-    int fd = open("output.txt", O_WRONLY | O_CREAT | O_TRUNC , 0644);
-    
-    ft_putendl_fd("hello world", fd);
-    //ft_putchar_fd('\n', fd);
+	char str[] = "hello world";
 
-    close(fd);
-    return 0;
+
+    printf("Original string: %s\n", str);
+
+    // Move part of the string to an overlapping region
+    memmove(str + 7, str, 5);
+
+    printf("After memmove: %s\n", str);
+	return 0;
 }

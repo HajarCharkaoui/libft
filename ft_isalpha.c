@@ -6,19 +6,18 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 10:17:58 by hacharka          #+#    #+#             */
-/*   Updated: 2024/10/28 10:17:59 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/06 14:21:20 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
-int ft_isalpha(int c)
-{
-    if ((c >= 65 && c <= 90 ) || (c >= 97 && c <= 122 ))
-    {
-        return 1;
-    }
-    else
-        return 0;
 
+int	ft_isalpha(int c)
+{
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	{
+		return (1);
+	}
+	else
+		return (0);
 }
