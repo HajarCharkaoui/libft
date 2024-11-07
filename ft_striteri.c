@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:32:55 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/05 15:50:04 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:39:41 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 #include <stdio.h>
 #include <string.h>
 
-
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	unsigned int i;
-	
+	unsigned int	i;
+
 	i = 0;
 	while (s[i] != '\0')
 	{
@@ -26,30 +25,23 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-void my_transform(unsigned int index, char *c) {
-    if (index % 2 == 0)
-        *c = ft_toupper(*c); // Convert to uppercase if index is even
-    else
-        *c = ft_tolower(*c); // Convert to lowercase if index is odd
-}
 
-int main()
-{
-	char *s = "Hello World!";
-	unsigned int i = 0;
-
-
-    
-        printf("Original: %s\n", s);
-		while ( s[i] != '\0')
-		{
-			my_transform(i, &s[i]);
-			i++;
-		}
-		
-		
-        printf("Transformed: %s\n", s);
-       
-
-    return 0;
-}
+// void my_transform(unsigned int index, char *c) {
+//     if (index % 2 == 0)
+//         *c = ft_toupper(*c); // Convert to uppercase if index is even
+//     else
+//         *c = ft_tolower(*c); // Convert to lowercase if index is odd
+// }
+// int main()
+// {
+// 	char *s = "Hello World!";
+// 	unsigned int i = 0;
+//         printf("Original: %s\n", s);
+// 		while ( s[i] != '\0')
+// 		{
+// 			my_transform(i, &s[i]);
+// 			i++;
+// 		}
+//         printf("Transformed: %s\n", s);
+//     return 0;
+// }

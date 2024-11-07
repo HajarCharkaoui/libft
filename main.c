@@ -39,14 +39,15 @@
 
 int main()
 {
-	char str[] = "hello world";
+	char str[15] = "hello world";
 
 
     printf("Original string: %s\n", str);
 
     // Move part of the string to an overlapping region
-    memmove(str + 7, str, 5);
+    ft_memset(str, 'h', 5);
+  
 
-    printf("After memmove: %s\n", str);
+    printf("After memset: %s\n", str);
 	return 0;
 }
