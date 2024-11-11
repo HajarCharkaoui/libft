@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:26:22 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/07 21:33:34 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/11 10:47:30 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char		*result;
+	char			*result;
 	unsigned int	i;
 
 	result = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));

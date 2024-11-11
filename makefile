@@ -52,11 +52,12 @@ $(NAME) : $(OBJ)
 test: $(NAME) main.c
 	$(CC) $(CFLAGS) main.c $(NAME) -o libft_test
 
+
 run_tests: test
 	./libft_test
 
 
-$ (TARGET) : $(OBJ)
+$(TARGET) : $(OBJ)
 	$(CC) $(OBJ) -o $(TARGET)
 
 #Compilation des fichiers objets
@@ -66,3 +67,8 @@ $ (TARGET) : $(OBJ)
 
 clean:
 	rm -f $(OBJ) $(TARGET)
+
+fclean : clean
+	rm -f $(NAME)
+
+re: fclean all
