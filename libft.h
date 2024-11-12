@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 13:07:03 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/11 21:06:23 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/12 19:48:08 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
-size_t	ft_strlcat(char *dst, const char *src, size_t size);
-size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+size_t  ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize);
+size_t  ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
 size_t	ft_strlen(const char *s);
 int		ft_toupper(int c);
 int		ft_tolower(int c);

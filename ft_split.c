@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 16:15:28 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/07 17:32:29 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/12 17:30:18 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ char	**ft_split(char const *s, char c)
 	int		start;
 
 	arr = (char **)malloc ((count_del(s, c) + 1) * sizeof(char *));
-	if (!arr) 
+	if (!*arr) 
 		return (NULL);
 	j = 0;
 	start = 0;

@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:32:55 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/07 17:39:41 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/12 18:08:37 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,18 @@
 #include <stdio.h>
 #include <string.h>
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned int	i;
+	unsigned int i;
 
 	i = 0;
-	while (s[i] != '\0')
+	if (s != '\0' && f != '\0')
 	{
-		f(i, &s[i]);
-		i++;
+		while (s[i] != '\0')
+		{
+			f(i, &s[i]);
+			i++;
+		}
 	}
 }
 

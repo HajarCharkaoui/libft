@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 16:43:33 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/08 15:09:17 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/12 17:29:18 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	sub = malloc(len + 1);
 	i = 0;
-	if (sub == NULL)
+	if (*sub == '\0')
 		return (NULL);
 	while (i < len && s[start] != '\0')
 	{
