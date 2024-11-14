@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 16:15:28 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/12 17:30:18 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/14 21:34:43 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,21 +38,6 @@ size_t	count_len(const char *str, char c)
 		len++;
 	return (len);
 }
-/*void print_string(char *strs, const char *s1, char c)
-{
-	int i;
-	int j;
-
-	j = 0;
-	i = 0;
-	while (s1[j] != '\0' && s1[j] != c)
-	{
-		strs[i] = s1[j];
-		i++;
-		j++;
-	}
-	strs[i] = '\0';
-}*/
 
 void	free_memory(char **str, int j)
 {
@@ -66,23 +51,27 @@ char	**ft_split(char const *s, char c)
 	char	**arr;
 	int		j;
 	int		start;
+	int		word_len;
 
+	if (!s)
+		return (NULL);
 	arr = (char **)malloc ((count_del(s, c) + 1) * sizeof(char *));
-	if (!*arr) 
+	if (!arr) 
 		return (NULL);
 	j = 0;
 	start = 0;
-	while (j < count_del(s, c) && *s != '\0')
+	while (j < count_del(s, c) && s[start] != '\0')
 	{
 		while (s[start] == c) 
 			start++;
-		arr[j] = ft_substr(s, start, count_len(s, c));
+		word_len = count_len(s + start, c);
+		arr[j] = ft_substr(s, start, word_len);
 		if (!arr[j])
 		{
 			free_memory(arr, j);
 			return (NULL);
 		}
-		start += count_len(s, c);
+		start += word_len;
 		j++;
 	}
 	arr[j] = NULL;

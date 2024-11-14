@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:13:20 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/08 15:07:43 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/14 18:55:31 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*trim;
 	size_t	i;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = 0;
 	while (s1[start] != '\0' && isexiste(set, s1[start]) == 1)
 		start++; 
 	end = ft_strlen(s1);
-	end--;
-	while (end > 0 && isexiste(set, s1[end]) == 1)
+	while (end > start && isexiste(set, s1[end - 1]) == 1)
 		end--; 
 	trim = malloc(end - start + 1);
 	if (trim != NULL)
