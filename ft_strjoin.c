@@ -14,16 +14,16 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t		i;
-	size_t		j;
-	char		*join;
+	size_t	i;
+	size_t	j;
+	char	*join;
 
 	if (!s1 || !s2)
 		return (NULL);
 	join = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (join == '\0')
 		return (NULL);
-	else 
+	else
 	{
 		i = 0;
 		j = 0;

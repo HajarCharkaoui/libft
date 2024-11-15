@@ -42,12 +42,15 @@ SRC = ft_isalpha.c \
 		ft_putnbr_fd.c \
 		#main.c
 
+BONUS_SRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c
+
 OBJ = $(SRC:.c=.o)
+BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
 all: $(NAME)
 #creation de la bibliotheque
-$(NAME) : $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+$(NAME) : $(OBJ) $(BONUS_OBJ)
+	ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
 
 test: $(NAME) main.c
 	$(CC) $(CFLAGS) main.c $(NAME) -o libft_test
@@ -66,9 +69,9 @@ $(TARGET) : $(OBJ)
 
 
 clean:
-	rm -f $(OBJ) $(TARGET)
+	rm -f $(OBJ) $(TARGET) $(BONUS_OBJ)
 
 fclean : clean
-	rm -f $(NAME)
+	rm -f $(NAME) 
 
 re: fclean all

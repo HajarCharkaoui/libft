@@ -11,12 +11,12 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 #include <fcntl.h>
+#include <unistd.h>
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write (fd, &c, 1);
+	write(fd, &c, 1);
 }
 
 // int main()
@@ -26,5 +26,5 @@ void	ft_putchar_fd(char c, int fd)
 //     ft_putchar_fd('\n', fd);
 
 //     close(fd);
-//     return 0;
+//     return (0);
 // }

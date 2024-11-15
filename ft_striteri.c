@@ -14,9 +14,9 @@
 #include <stdio.h>
 #include <string.h>
 
-void ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned int i;
+	unsigned int	i;
 
 	i = 0;
 	if (s != '\0' && f != '\0')
@@ -46,5 +46,5 @@ void ft_striteri(char *s, void (*f)(unsigned int, char *))
 // 			i++;
 // 		}
 //         printf("Transformed: %s\n", s);
-//     return 0;
+//     return (0);
 // }

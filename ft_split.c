@@ -15,7 +15,7 @@
 
 int	count_del(const char *split, char c)
 {
-	int	count ;
+	int	count;
 	int	i;
 
 	count = 0;
@@ -34,14 +34,14 @@ size_t	count_len(const char *str, char c)
 	size_t	len;
 
 	len = 0;
-	while (str[len] != c && str[len] != '\0') 
+	while (str[len] != c && str[len] != '\0')
 		len++;
 	return (len);
 }
 
 void	free_memory(char **str, int j)
 {
-	while (j > 0) 
+	while (j > 0)
 		free(str[--j]);
 	free(str);
 }
@@ -55,14 +55,14 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	arr = (char **)malloc ((count_del(s, c) + 1) * sizeof(char *));
-	if (!arr) 
+	arr = (char **)malloc((count_del(s, c) + 1) * sizeof(char *));
+	if (!arr)
 		return (NULL);
 	j = 0;
 	start = 0;
 	while (j < count_del(s, c) && s[start] != '\0')
 	{
-		while (s[start] == c) 
+		while (s[start] == c)
 			start++;
 		word_len = count_len(s + start, c);
 		arr[j] = ft_substr(s, start, word_len);

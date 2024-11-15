@@ -73,7 +73,7 @@ char	*ft_itoa(int n)
 	int		len;
 
 	len = lenofstring(n);
-	itoa = malloc ((len + 1) * sizeof(char));
+	itoa = malloc((len + 1) * sizeof(char));
 	if (itoa == NULL)
 		return (NULL);
 	else if (n == -2147483648)
@@ -82,5 +82,5 @@ char	*ft_itoa(int n)
 	{
 		fill_the_string(itoa, n, len);
 	}
-	return (itoa); 
+	return (itoa);
 }

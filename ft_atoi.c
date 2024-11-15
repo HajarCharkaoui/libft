@@ -6,16 +6,17 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:28:10 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/06 13:53:44 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/15 18:57:32 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
 
 int	ft_atoi(const char *str)
 {
 	int	i;
-	int	nbr;
+	long	nbr;
 	int	sign;
 
 	i = 0;
@@ -32,7 +33,21 @@ int	ft_atoi(const char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		nbr = nbr * 10 + str[i] - 48;
+		if (nbr  > LONG_MAX && sign == 1)
+            return (-1);
+        if (nbr > LONG_MAX && sign == -1)
+            return (0);
 		i++;
 	}
-	return (nbr * sign);
+	return ((int)(nbr * sign));
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	const char nbr[] = "9223372036854775807998";
+
+// 	printf("%d\n", ft_atoi(nbr));
+// 	printf("%d", atoi(nbr));
+// 	return 0;
+// }

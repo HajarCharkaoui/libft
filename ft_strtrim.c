@@ -37,10 +37,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	start = 0;
 	while (s1[start] != '\0' && isexiste(set, s1[start]) == 1)
-		start++; 
+		start++;
 	end = ft_strlen(s1);
 	while (end > start && isexiste(set, s1[end - 1]) == 1)
-		end--; 
+		end--;
 	trim = malloc(end - start + 1);
 	if (trim != NULL)
 	{

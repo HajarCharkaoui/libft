@@ -18,6 +18,6 @@ int	ft_isprint(int c)
 	{
 		return (1);
 	}
-	else 
+	else
 		return (0);
 }
