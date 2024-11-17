@@ -12,17 +12,17 @@
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-    int count;
+	int	count;
 
-    count = 0;
-    while (lst)
-    {
-        count++;
-        lst = lst->next;
-    }
-    return (count);
+	count = 0;
+	while (lst)
+	{
+		count++;
+		lst = lst->next;
+	}
+	return (count);
 }
 
 // #include <stdio.h>
@@ -31,14 +31,14 @@ int ft_lstsize(t_list *lst)
 //     int a = 99;
 //     char    *str = "hello !";
 //     int     b = 1999;
-    
+
 //     t_list *node = ft_lstnew(&a);
 //     t_list *node1 = ft_lstnew(str);
 //     t_list *node2 = ft_lstnew(&b);
-    
+
 //     node->next = node1;
 //     node1->next = node2;
 //     int len_list = ft_lstsize(node);
 //     printf("Numbers of nodes : %d\n", len_list);
-//     return 0;
+//     return (0);
 // }

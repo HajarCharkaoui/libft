@@ -15,9 +15,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
+	int		i;
 	long	nbr;
-	int	sign;
+	int		sign;
 
 	i = 0;
 	sign = 1;
@@ -33,10 +33,10 @@ int	ft_atoi(const char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		nbr = nbr * 10 + str[i] - 48;
-		if (nbr  > LONG_MAX && sign == 1)
-            return (-1);
-        if (nbr > LONG_MAX && sign == -1)
-            return (0);
+		if (nbr > LONG_MAX && sign == 1)
+			return (-1);
+		if (nbr > LONG_MAX && sign == -1)
+			return (0);
 		i++;
 	}
 	return ((int)(nbr * sign));
@@ -49,5 +49,5 @@ int	ft_atoi(const char *str)
 
 // 	printf("%d\n", ft_atoi(nbr));
 // 	printf("%d", atoi(nbr));
-// 	return 0;
+// 	return (0);
 // }

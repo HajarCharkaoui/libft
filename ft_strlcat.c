@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 08:40:28 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/14 17:41:53 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/17 06:55:44 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	src_len = 0;
 	if (!dst && dstsize == 0)
 		return (0);
-	// if (!src)
-	//     return (dst_len);
 	while (dst[dst_len] != '\0' && dst_len < dstsize)
 		dst_len++;
 	while (src[src_len] != '\0')

@@ -4,12 +4,20 @@
 
 int	main(void)
 {
-	const char	sr[] = "hello ";
-	char		ds[20] = "hajar ";
+	const char	sr[] = "";
+	char sep = NULL;
 
-	printf("->%zu\n", ft_strlcat(ds, sr, 20));
-	printf("->%s\n", ds);
-	// printf("->%zu\n", strlcat(ds ,sr, 20));
-	// printf("->%s\n", ds);
+	char **result = ft_split(sr, sep);
+
+	 for (int i = 0; result[i] != NULL; i++)
+    {
+        printf("result[%d]: %s\n", i, result[i]);
+    }
+
+	for (int i = 0; result[i] != NULL; i++)
+    {
+        free(result[i]);
+    }
+    free(result);
 	return (0);
 }

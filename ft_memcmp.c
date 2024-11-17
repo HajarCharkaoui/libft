@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:03:13 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/12 16:16:08 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/16 14:08:00 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,19 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	{
 		if (p1[i] != p2[i])
 		{
-			return ((const unsigned char)p1[i] - (const unsigned char)p2[i]);
+			return (p1[i] - p2[i]);
 		}
 		i++;
 	}
 	return (0);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	const char *d1= "a";
+// 	const char *d2 = "hajar";
+// 	printf("->%d\n", ft_memcmp(d1, d2, 8));
+// 	printf("->%d\n", memcmp(d1, d2, 8));
+// 	return (0);
+// }

@@ -33,7 +33,7 @@ t_list	*ft_lstnew(void *content)
 // 	int data1 = 2024;
 //     t_list *node = ft_lstnew(data);
 // 	t_list *node1 = ft_lstnew(&data1);
-	
+
 // 	node->next = node1;
 
 //     if (node)
@@ -48,12 +48,12 @@ t_list	*ft_lstnew(void *content)
 // 			{
 // 				printf("Node content: %d\n", *(int *)node->content);
 // 			}
-			
+
 //        		printf("Node next: %p\n", node->next);
 // 			node = node->next;
-			
+
 // 		}
-        
+
 //         free(node); // Free allocated memory
 // 		free(node1);
 //     }
@@ -62,5 +62,5 @@ t_list	*ft_lstnew(void *content)
 //         printf("Failed to create a new list node.\n");
 //     }
 
-//     return 0;
+//     return (0);
 // }

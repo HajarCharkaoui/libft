@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 11:36:33 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/15 18:21:17 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/17 06:23:39 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,15 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t			totalsize;
 
 	i = 0;
-	if (size < 0 || count < 0)
-		return (NULL);
 	if (size == 0 || count == 0)
-		size = count = 1;
+	{
+		count = 1;
+		size = 1;
+	}
 	totalsize = size * count;
-    if (totalsize / size != count)
-        return (NULL);
-	s = (unsigned char *)malloc(size * count);
+	if (totalsize / size != count)
+		return (NULL);
+	s = (unsigned char *)malloc(totalsize);
 	if (!s)
 		return (NULL);
 	while (i < totalsize)
@@ -38,27 +39,13 @@ void	*ft_calloc(size_t count, size_t size)
 	return (s);
 }
 
+// #include <stdio.h>
 // int main()
 // {
-// 	// char *str = "";
-// 	// str = (char *)ft_calloc(0, 0);
-// 	//str = (char *)calloc(0, 0);
-// 	int size = 0;
-// 		 void * d1 = ft_calloc(size,0);
-//         void * d2 = calloc(size, 0);
-// 		printf("%p \n%p", d1, d2);
-//     // if (str == NULL) {
-//     //     printf("Memory allocation failed\n");
-//     //     return (1);
-//     // }
-
-//     // Print initialized values (all should be zero)
-//     // for (size_t i = 0; i < 5; i++) {
-//     //     printf("array[%zu] = %d\n", i, str[i]);
-//     // }
-
-//     // Free allocated memory
-//     // free(str);
-//     return (0);
-
+// // 	char *str = (char *)ft_calloc(0, 0);
+// // 	char *str1 = (char *)calloc(0, 0);
+// // 	printf("%p \n%p", str, str1);
+// // //     // Free allocated memory
+// //     free(str);
+// // 	free(str1);
 // }

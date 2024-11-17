@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 15:44:13 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/06 15:44:00 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/16 13:50:19 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	lenofstring(int n)
 		return (count + 1);
 }
 
-void	pos_number(char *str, int n, int lenght)
+void	neg_number(char *str, int n, int lenght)
 {
 	int	s;
 	int	e;
@@ -46,7 +46,7 @@ void	pos_number(char *str, int n, int lenght)
 	}
 }
 
-void	neg_number(char *str, int n, int length)
+void	pos_number(char *str, int n, int length)
 {
 	int	e;
 
@@ -62,9 +62,9 @@ void	neg_number(char *str, int n, int length)
 void	fill_the_string(char *str, int n, int length)
 {
 	if (n < 0)
-		pos_number(str, n, length);
-	else
 		neg_number(str, n, length);
+	else
+		pos_number(str, n, length);
 }
 
 char	*ft_itoa(int n)
