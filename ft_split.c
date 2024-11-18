@@ -6,27 +6,32 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 16:15:28 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/17 06:45:08 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/18 16:59:18 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int	count_del(const char *split, char c)
+int	count_del(const char *s, char c)
 {
-	int	count;
-	int	i;
+    int	count = 0;
+    int	in_substring = 0;
 
-	count = 0;
-	i = 0;
-	while (split[i] != '\0')
-	{
-		if (split[i] != c && (split[i - 1] == c || i == 0))
-			count++;
-		i++;
-	}
-	return (count);
+    while (*s)
+    {
+        if (*s != c && !in_substring)
+        {
+            in_substring = 1;
+            count++;
+        }
+        else if (*s == c)
+        {
+            in_substring = 0;
+        }
+        s++;
+    }
+    return (count);
 }
 
 size_t	count_len(const char *str, char c)
@@ -41,8 +46,11 @@ size_t	count_len(const char *str, char c)
 
 void	free_memory(char **str, int j)
 {
-	while (j > 0)
-		free(str[--j]);
+	while (j >= 0)
+	{
+		free(str[j]);
+		j--;
+	}		
 	free(str);
 }
 
@@ -83,3 +91,15 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (fill_the_array(arr, s, c));
 }
+
+// int main()
+// {
+// 	char **tab = ft_split("hello !", ' ');
+
+// 	int i = 0;
+// 	while (tab[i])
+// 	{
+// 		printf("%s\n", tab[i]);
+// 		i++;
+// 	}
+// }

@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 10:35:22 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/12 16:05:25 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:00:44 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,25 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*src;
 	size_t			i;
+	unsigned char	*str;
 
-	src = (unsigned char *)s;
+	str = (unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{
-		if (src[i] == (unsigned char)c)
-			return (&src[i]);
+		if (str[i] == (unsigned char)c)
+			return ((void *)&str[i]);
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
+
+// int main()
+// {
+// 	const char *s = "teste";
+// 	int c = '\0';
+// 	//printf("%d\n", c);
+// 	printf("own :%s\n", ft_memchr(s, c, 4));
+// 	printf("or :%s\n", memchr(s, c, 4));
+// }

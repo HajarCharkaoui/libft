@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 10:17:58 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/06 14:21:20 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/18 13:01:29 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,10 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
+
+// int main()
+// {
+// 	char c= 100;
+// 	printf("%d", ft_isalpha(c));
+// 	return 0;
+// }
