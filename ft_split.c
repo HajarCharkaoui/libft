@@ -6,32 +6,33 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 16:15:28 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/18 16:59:18 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/18 18:15:49 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	count_del(const char *s, char c)
 {
-    int	count = 0;
-    int	in_substring = 0;
+	int		count;
+	int		in_substring;
 
-    while (*s)
-    {
-        if (*s != c && !in_substring)
-        {
-            in_substring = 1;
-            count++;
-        }
-        else if (*s == c)
-        {
-            in_substring = 0;
-        }
-        s++;
-    }
-    return (count);
+	count = 0;
+	in_substring = 0;
+	while (*s)
+	{
+		if (*s != c && !in_substring)
+		{
+			in_substring = 1;
+			count++;
+		}
+		else if (*s == c)
+		{
+			in_substring = 0;
+		}
+		s++;
+	}
+	return (count);
 }
 
 size_t	count_len(const char *str, char c)
@@ -50,7 +51,7 @@ void	free_memory(char **str, int j)
 	{
 		free(str[j]);
 		j--;
-	}		
+	}
 	free(str);
 }
 
@@ -95,7 +96,6 @@ char	**ft_split(char const *s, char c)
 // int main()
 // {
 // 	char **tab = ft_split("hello !", ' ');
-
 // 	int i = 0;
 // 	while (tab[i])
 // 	{

@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 15:44:13 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/18 16:36:11 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/18 17:48:31 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	lenofstring(int n)
 
 	count = 0;
 	if (n == 0)
-        return (1);
+		return (1);
 	if (n < 0)
 		count++;
 	while (n != 0)
@@ -85,8 +85,6 @@ char	*ft_itoa(int n)
 
 	len = lenofstring(n);
 	num = n;
-	if (n == INT_MIN)
-		return (ft_strdup("-2147483648"));
 	itoa = malloc((len + 1) * sizeof(char));
 	if (itoa == NULL)
 		return (NULL);
@@ -104,7 +102,6 @@ char	*ft_itoa(int n)
 		itoa[len--] = num % 10 + 48;
 		num /= 10;
 	}
-	
 	return (itoa);
 }
 
@@ -112,11 +109,11 @@ char	*ft_itoa(int n)
 // {
 //     char *i1 = ft_itoa(-623);
 //     char *i2 = ft_itoa(156);
-//     char *i3 = ft_itoa(0);
+//     char *i3 = ft_itoa(0123);
 
 //     printf("i1: %s\n", i1); // Expected: -623
 //     printf("i2: %s\n", i2); // Expected: 156
-//     printf("i3: %s\n", i3); // Expected: 0
+//     printf("i3: %d\n", 123); // Expected: 0
 
 //     free(i1);
 //     free(i2);
