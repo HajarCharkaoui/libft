@@ -6,13 +6,13 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:13:20 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/14 18:55:31 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/18 20:57:41 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	isexiste(const char *str, char c)
+static int	isexiste(const char *str, char c)
 {
 	size_t	i;
 

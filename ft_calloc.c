@@ -6,12 +6,11 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 11:36:33 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/17 06:23:39 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/18 21:34:16 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {

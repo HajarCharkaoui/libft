@@ -6,13 +6,13 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 16:15:28 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/18 18:15:49 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/18 20:55:10 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_del(const char *s, char c)
+static int	count_del(const char *s, char c)
 {
 	int		count;
 	int		in_substring;
@@ -35,7 +35,7 @@ int	count_del(const char *s, char c)
 	return (count);
 }
 
-size_t	count_len(const char *str, char c)
+static size_t	count_len(const char *str, char c)
 {
 	size_t	len;
 
@@ -45,7 +45,7 @@ size_t	count_len(const char *str, char c)
 	return (len);
 }
 
-void	free_memory(char **str, int j)
+static void	free_memory(char **str, int j)
 {
 	while (j >= 0)
 	{
@@ -55,7 +55,7 @@ void	free_memory(char **str, int j)
 	free(str);
 }
 
-char	**fill_the_array(char **array, char const *s, char c)
+static char	**fill_the_array(char **array, char const *s, char c)
 {
 	int		j;
 	int		start;

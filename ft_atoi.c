@@ -6,12 +6,11 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:28:10 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/15 18:57:32 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/18 21:24:12 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
 
 int	ft_atoi(const char *str)
 {

@@ -6,14 +6,13 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 15:44:13 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/18 17:48:31 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/18 21:23:50 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
 
-int	lenofstring(int n)
+static int	lenofstring(int n)
 {
 	int	count;
 
@@ -29,53 +28,6 @@ int	lenofstring(int n)
 	}
 	return (count);
 }
-
-// void	neg_number(char *str, int n, int lenght)
-// {
-// 	int	s;
-// 	int	e;
-
-// 	str[lenght] = '\0';
-// 	s = 0;
-// 	str[s] = '-';
-// 	e = --lenght;
-// 	if (n == INT_MIN)
-//     {
-//         str[e--] = '8';
-//         n = -(n / 10);
-//     }
-//     else
-//     {
-//         n = -n;
-//     }
-// 	while (e > 0)
-// 	{
-// 		str[e] = n % 10 + 48;
-// 		n /= 10;
-// 		e--;
-// 	}
-// }
-
-// void	pos_number(char *str, int n, int length)
-// {
-// 	int	e;
-
-// 	e = length - 1;
-// 	while (e >= 0)
-// 	{
-// 		str[e] = n % 10 + 48;
-// 		n /= 10;
-// 		e--;
-// 	}
-// }
-
-// void	fill_the_string(char *str, int n, int length)
-// {
-// 	if (n < 0)
-// 		neg_number(str, n, length);
-// 	else
-// 		pos_number(str, n, length);
-// }
 
 char	*ft_itoa(int n)
 {
@@ -110,7 +62,6 @@ char	*ft_itoa(int n)
 //     char *i1 = ft_itoa(-623);
 //     char *i2 = ft_itoa(156);
 //     char *i3 = ft_itoa(0123);
-
 //     printf("i1: %s\n", i1); // Expected: -623
 //     printf("i2: %s\n", i2); // Expected: 156
 //     printf("i3: %d\n", 123); // Expected: 0
@@ -118,6 +69,5 @@ char	*ft_itoa(int n)
 //     free(i1);
 //     free(i2);
 //     free(i3);
-
 //     return 0;
 // }

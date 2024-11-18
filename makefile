@@ -1,8 +1,6 @@
-CC = gcc
+CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
-
-TARGET = libft
 
 NAME = libft.a
 
@@ -51,18 +49,14 @@ all: $(NAME)
 $(NAME) : $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
-test: $(NAME) main.c
-	$(CC) $(CFLAGS) main.c $(NAME) -o a.out
-
 bonus: $(BONUS_OBJ)
 	ar rcs $(NAME) $(BONUS_OBJ)
 #Compilation des fichiers objets
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-
 clean:
-	rm -f $(OBJ) $(TARGET) $(BONUS_OBJ)
+	rm -f $(OBJ) $(BONUS_OBJ)
 
 fclean : clean
 	rm -f $(NAME) 
