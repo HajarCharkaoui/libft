@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 16:15:28 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/18 20:55:10 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/22 22:42:37 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,14 +92,3 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (fill_the_array(arr, s, c));
 }
-
-// int main()
-// {
-// 	char **tab = ft_split("hello !", ' ');
-// 	int i = 0;
-// 	while (tab[i])
-// 	{
-// 		printf("%s\n", tab[i]);
-// 		i++;
-// 	}
-// }

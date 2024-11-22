@@ -4,13 +4,13 @@ CFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a
 
-SRC = ft_isalpha.c \
-	  ft_isascii.c \
-	  ft_isdigit.c \
-	  ft_isprint.c \
-	  ft_isalnum.c \
-	  ft_toupper.c \
-	  ft_tolower.c \
+SRC =	ft_isalpha.c \
+		ft_isascii.c \
+		ft_isdigit.c \
+		ft_isprint.c \
+		ft_isalnum.c \
+		ft_toupper.c \
+		ft_tolower.c \
 		ft_strlen.c \
 		ft_strnstr.c \
 		ft_strlcpy.c \
@@ -45,15 +45,12 @@ OBJ = $(SRC:.c=.o)
 BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
 all: $(NAME)
-#creation de la bibliotheque
-$(NAME) : $(OBJ)
+
+$(NAME) : $(OBJ) libft.h
 	ar rcs $(NAME) $(OBJ)
 
 bonus: $(BONUS_OBJ)
 	ar rcs $(NAME) $(BONUS_OBJ)
-#Compilation des fichiers objets
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJ) $(BONUS_OBJ)
@@ -62,3 +59,5 @@ fclean : clean
 	rm -f $(NAME) 
 
 re: fclean all
+
+.PHONY: fclean re clean

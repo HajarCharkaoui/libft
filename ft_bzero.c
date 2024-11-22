@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 15:37:56 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/16 12:13:32 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/22 22:39:48 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,24 +25,3 @@ void	ft_bzero(void *s, size_t len)
 		i++;
 	}
 }
-
-// #include <stdio.h>
-// #include <string.h>
-
-// int main()
-// {
-// 	char s[] = "hello";
-
-// 	//ft_bzero(s, 3);
-// 	bzero(s, 3);
-// 	for (int i = 0; i < sizeof(s); i++)
-//     {
-//         if (s[i] == '\0')
-//             printf("\\0");
-//         else
-//             printf("%c", s[i]);
-//     }
-//     printf("\n");
-
-// 	return (0);
-// }

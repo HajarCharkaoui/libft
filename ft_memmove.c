@@ -6,12 +6,11 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 14:02:11 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/18 11:25:59 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/22 22:42:03 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -39,11 +38,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			d[len] = s[len];
 	return (dst);
 }
-
-// int main()
-// {
-// 	char d[] = "hello world";
-// 	char s[] = "";
-// 	printf("own:%s\n", ft_memmove(d, s, 1));
-// 	printf("or:%s\n", memmove(d, s, 1));
-// }

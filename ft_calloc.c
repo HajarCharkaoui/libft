@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 11:36:33 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/18 21:34:16 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/22 22:39:56 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,3 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	return (s);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-// // 	char *str = (char *)ft_calloc(0, 0);
-// // 	char *str1 = (char *)calloc(0, 0);
-// // 	printf("%p \n%p", str, str1);
-// // //     // Free allocated memory
-// //     free(str);
-// // 	free(str1);
-// }

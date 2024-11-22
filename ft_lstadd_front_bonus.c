@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 10:02:16 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/18 21:21:09 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/22 22:40:42 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,25 +19,3 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new->next = *lst;
 	*lst = new;
 }
-
-// int main()
-// {
-// 	t_list *list;
-// 	char *str = "hajar";
-// 	int b = 76;
-// 	int c = 77;	
-// 	t_list *node1 = ft_lstnew("str");
-// 	t_list *node2 = ft_lstnew("&b");
-// 	t_list *new = ft_lstnew("&c");
-// 	list = node1;
-// 	node1->next = node2;
-// 	// write(1, "X", 1);
-// 	ft_lstadd_front(NULL, new);
-// 	while(list)
-// 	{
-// 		printf("%s\n", list->content);
-// 		list = list->next;
-// 	}
-// 	list = node1;
-// 	return (0);
-// }

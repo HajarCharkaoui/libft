@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:28:10 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/18 21:24:12 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/22 22:39:38 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,3 @@ int	ft_atoi(const char *str)
 	}
 	return ((int)(nbr * sign));
 }
-
-// #include <stdio.h>
-// int main()
-// {
-// 	const char nbr[] = "9223372036854775807998";
-
-// 	printf("%d\n", ft_atoi(nbr));
-// 	printf("%d", atoi(nbr));
-// 	return (0);
-// }

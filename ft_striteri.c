@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:32:55 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/18 21:25:51 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/22 22:43:03 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,23 +25,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
-
-// void my_transform(unsigned int index, char *c) {
-//     if (index % 2 == 0)
-//         *c = ft_toupper(*c); // Convert to uppercase if index is even
-//     else
-//         *c = ft_tolower(*c); // Convert to lowercase if index is odd
-// }
-// int main()
-// {
-// 	char *s = "Hello World!";
-// 	unsigned int i = 0;
-//         printf("Original: %s\n", s);
-// 		while ( s[i] != '\0')
-// 		{
-// 			my_transform(i, &s[i]);
-// 			i++;
-// 		}
-//         printf("Transformed: %s\n", s);
-//     return (0);
-// }

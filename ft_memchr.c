@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 10:35:22 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/18 13:00:44 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/22 22:41:46 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-
-// int main()
-// {
-// 	const char *s = "teste";
-// 	int c = '\0';
-// 	//printf("%d\n", c);
-// 	printf("own :%s\n", ft_memchr(s, c, 4));
-// 	printf("or :%s\n", memchr(s, c, 4));
-// }

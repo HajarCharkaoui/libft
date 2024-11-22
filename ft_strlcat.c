@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 08:40:28 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/18 21:23:14 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/22 22:43:14 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }
-
-// int main()
-// {
-// 	printf("%zu", ft_strlcat("hello", 0, 2));
-// 	// printf("%zu", strlcat("hello", 0, 2));
-// 	return (0);
-// }

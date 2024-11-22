@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 10:18:41 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/18 12:47:35 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/22 22:44:48 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)&s[i]);
 	return (NULL);
 }
-
-// int main()
-// {
-// 	const char str[] = "hello";
-
-// 	int n = '\0';
-// 	printf("own: %s\n", ft_strchr(str, n));
-// 	printf("org: %s\n", strchr(str, n));
-// }

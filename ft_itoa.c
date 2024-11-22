@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 15:44:13 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/18 21:23:50 by hacharka         ###   ########.fr       */
+/*   Updated: 2024/11/22 22:40:23 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,18 +56,3 @@ char	*ft_itoa(int n)
 	}
 	return (itoa);
 }
-
-// int main()
-// {
-//     char *i1 = ft_itoa(-623);
-//     char *i2 = ft_itoa(156);
-//     char *i3 = ft_itoa(0123);
-//     printf("i1: %s\n", i1); // Expected: -623
-//     printf("i2: %s\n", i2); // Expected: 156
-//     printf("i3: %d\n", 123); // Expected: 0
-
-//     free(i1);
-//     free(i2);
-//     free(i3);
-//     return 0;
-// }
