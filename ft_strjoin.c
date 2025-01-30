@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 15:34:19 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/18 21:39:52 by hacharka         ###   ########.fr       */
+/*   Updated: 2025/01/27 12:40:59 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	j;
 	char	*join;
 
-	if (!s1 || !s2)
-		return (NULL);
+	if (!s1)
+		return ((char *)s2);
 	join = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (join == NULL)
 		return (NULL);

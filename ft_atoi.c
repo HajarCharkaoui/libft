@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:28:10 by hacharka          #+#    #+#             */
-/*   Updated: 2024/11/22 22:39:38 by hacharka         ###   ########.fr       */
+/*   Updated: 2025/01/27 15:14:43 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	nbr = 0;
+	if (!str)
+	return (0);
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
 	if (str[i] == '-' || str[i] == '+')
